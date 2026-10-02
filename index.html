@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Grid Arena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="backdrop">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+      <span class="grid-line"></span>
+    </div>
+
+    <main class="app-shell">
+      <section class="game-card">
+        <header class="topbar">
+          <div class="brand-wrap">
+            <div class="brand-mark">N</div>
+            <div>
+              <p class="eyebrow">Arcade // Strategy</p>
+              <h1>Neon Grid Arena</h1>
+            </div>
+          </div>
+
+          <button id="modeToggle" class="mode-toggle" type="button" aria-label="Toggle game mode">
+            <span class="mode-text">1P</span>
+            <span class="switch-track"><span class="switch-thumb"></span></span>
+            <span class="mode-text">2P</span>
+          </button>
+        </header>
+
+        <div class="status-panel">
+          <div class="turn-indicator">
+            <span id="turnToken" class="turn-token x">X</span>
+            <span id="statusText">Player X turn</span>
+          </div>
+
+          <div class="score-row">
+            <div class="score-box x-box">
+              <span class="label">X</span>
+              <strong id="scoreX">0</strong>
+            </div>
+            <div class="score-box o-box">
+              <span class="label">O</span>
+              <strong id="scoreO">0</strong>
+            </div>
+            <div class="score-box draw-box">
+              <span class="label">Draw</span>
+              <strong id="scoreDraw">0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="board-wrap">
+          <div id="board" class="board" aria-label="Tic-tac-toe board"></div>
+        </div>
+
+        <div class="action-row">
+          <button id="resetRoundBtn" class="primary-btn" type="button">New Round</button>
+          <button id="resetScoreBtn" class="ghost-btn" type="button">Reset Score</button>
+        </div>
+      </section>
+    </main>
+
+    <div id="burstLayer" class="burst-layer" aria-hidden="true"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
