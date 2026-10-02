@@ -4,13 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Neon Grid Arena</title>
+    <meta
+      name="description"
+      content="A premium neon-themed tic-tac-toe game with AI, score tracking, sound effects, and arcade visuals."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="backdrop">
+    <div class="backdrop" aria-hidden="true">
       <span class="orb orb-1"></span>
       <span class="orb orb-2"></span>
       <span class="orb orb-3"></span>
@@ -28,11 +35,14 @@
             </div>
           </div>
 
-          <button id="modeToggle" class="mode-toggle" type="button" aria-label="Toggle game mode">
-            <span class="mode-text">1P</span>
-            <span class="switch-track"><span class="switch-thumb"></span></span>
-            <span class="mode-text">2P</span>
-          </button>
+          <div class="top-actions">
+            <button id="difficultyBtn" class="chip-btn" type="button" aria-label="Change difficulty">
+              <span>AI: Normal</span>
+            </button>
+            <button id="soundToggle" class="chip-btn sound-btn" type="button" aria-label="Toggle sound">
+              <span class="sound-icon">🔊</span>
+            </button>
+          </div>
         </header>
 
         <div class="status-panel">
@@ -63,6 +73,11 @@
 
         <div class="action-row">
           <button id="resetRoundBtn" class="primary-btn" type="button">New Round</button>
+          <button id="modeToggle" class="secondary-btn" type="button">
+            <span>1P</span>
+            <span class="switch-track"><span class="switch-thumb"></span></span>
+            <span>2P</span>
+          </button>
           <button id="resetScoreBtn" class="ghost-btn" type="button">Reset Score</button>
         </div>
       </section>
